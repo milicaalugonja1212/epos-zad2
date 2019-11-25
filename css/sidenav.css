@@ -1,0 +1,51 @@
+<!-- sidebar -->
+
+.sidenav {
+    height: 100%; /* Full-height: remove this if you want "auto" height */
+    width: 100px; /* Set the width of the sidebar */
+    position: fixed; /* Fixed Sidebar (stay in place on scroll) */
+    z-index:-1; /* Stay on top */
+     left: -70px;
+	
+   
+    
+}
+
+#mySidenav a {
+    position: fixed; /* Fixed Sidebar (stay in place on scroll) */
+    
+    left: -103px;
+    transition: 0.3s;
+    padding: 15px;
+    width: 150px;
+    text-decoration: none;
+    font-size: 20px;
+    color: white;
+    border-radius: 0 10px 10px 0;
+        
+}
+
+#mySidenav a:hover {
+    left: 0;
+	z-index:1;
+}
+
+#facebook {
+    top: 220px;
+    background-color: #3B5998;
+}
+
+#youtube {
+    top: 270px;
+    background-color: #dd4b39;
+}
+
+#instagram {
+    top: 320px;
+    background-color: blue;
+}
+
+#servis {
+    top: 370px;
+    background-color: #555
+}

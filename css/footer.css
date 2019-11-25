@@ -1,0 +1,65 @@
+
+/* Pravljenje 3 kolone na ekranu */
+.column2 {
+  float: left;
+  width: 33.33%;
+  display: table;
+  
+  
+  
+}
+
+.row2 {margin: 0 0px;
+}
+
+/* Clear floats after the columns */
+.row2:after {
+  content: "";
+  display: table;
+  clear: both;
+ 
+}
+
+
+
+/* stilizovanje jednog box-a */
+.card2 {
+  
+  padding: 16px;
+  text-align: center;
+  background-color: #444;
+  color: white;
+  border-radius: 10%;
+  height: 290px;
+  
+ 
+  
+}
+
+.fa {font-size:50px;}
+
+.footer2 {
+   position: relative;
+   bottom: 1px;
+   width:100%;
+   margin: o auto;
+  
+   color: white;
+   text-align: center;
+   opacity:0.98;
+	filter: alpha(opacity=98);
+   
+   
+}
+
+/* Prilagodjenje manjim ekranima*/
+@media screen and (max-width: 600px) {
+  .column2 {
+    width: 100%;
+    display: block;
+    margin-bottom: 10px;
+  }
+  
+  
+
+}
