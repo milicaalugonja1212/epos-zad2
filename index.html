@@ -1,600 +1,459 @@
 <!DOCTYPE html>
 <html>
+
 <head>
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<link rel="stylesheet" type="text/css" href="css/scroollbar.css">
-<link rel="stylesheet" type="text/css" href="css/header.css">
-<link rel="stylesheet" type="text/css" href="css/footer.css">
-<link rel="stylesheet" type="text/css" href="css/sidenav.css">
-<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:300" type="text/css" />
-<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">  <!-- zbog ikona u footer-u	 -->
-<link rel="stylesheet" type="text/css" href="css/automobili1.css">
-<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:300" type="text/css" />
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css"
+    integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <!-- zbog ikona u footer-u	 -->
+  <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
 
-<link rel="stylesheet" type="text/css" href="css/info.css">
-<link rel="stylesheet" type="text/css" href="css/slideshow.css">
-<link rel="stylesheet" type="text/css" href="css/quotes.css">
-<style>
+  <link rel="stylesheet" type="text/css" href="css/index.css">
+  <link rel="stylesheet" type="text/css" href="css/scroollbar.css">
+  <link rel="stylesheet" type="text/css" href="css/header.css">
+  <link rel="stylesheet" type="text/css" href="css/footer.css">
+  <link rel="stylesheet" type="text/css" href="css/sidenav.css">
+  <link rel="stylesheet" type="text/css" href="css/automobili.css">
+  <link rel="stylesheet" type="text/css" href="css/info.css">
+  <link rel="stylesheet" type="text/css" href="css/slideshow.css">
+  <link rel="stylesheet" type="text/css" href="css/quotes.css">
 
-* {
-    box-sizing: border-box;
-}
-
-body, html {
-  height: 100%;
-  margin: 0;
-    font-family: Helvetica, sans-serif;
-	background: url("images/astra.jpg") no-repeat center center fixed
-	background-size: cover;
-	-webkit-background-size: cover;
-    -moz-background-size: cover;
-    -o-background-size: cover;
-}
-
-.bgimg-2, .bgimg-3 {
-  position: relative;
-  background-attachment: fixed;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-
-}
-.bgimg-1 {
-  width: 100wh;
-	height: 100%;
-	color: #fff;
-	background: linear-gradient(-45deg, #EE7752, #E73C7E, #23A6D5, #23D5AB);
-	background-size: 400% 400%;
-	-webkit-animation: Gradient 15s ease infinite;
-	-moz-animation: Gradient 15s ease infinite;
-	animation: Gradient 15s ease infinite;
-	
-    font-family: Helvetica, sans-serif;
-}
-
-.bgimg-2 {
-	background-image:url("images/astra.jpg");
-	min-height: 450px;
-}
-
-.bgimg-3 {
-  background-image: url("images/astra.jpg");
-  min-height: 400px;
-}
-
-.caption {
-  position: absolute;
-  left: 0;
-  top: 50%;
-  width:100%;
-  text-align: center;
-  color: #000;
-}
-
-.caption span.border {
-  background-color: grey;
-  color: #fff;
-  font-weight:800;
-  padding: 18px;
-  font-size: 25px;
-  letter-spacing: 10px;
-  opacity: 0.8;
-  text-align:justify;
-  
-}
-
-
-
-/* Turn off parallax scrolling for tablets and phones */
-@media only screen and (max-device-width: 1024px) {
-    .bgimg-1, .bgimg-2, .bgimg-3 {
-        background-attachment: scroll;
-    }
-}
-
-@-webkit-keyframes Gradient {
-	0% {
-		background-position: 0% 50%
-	}
-	50% {
-		background-position: 100% 50%
-	}
-	100% {
-		background-position: 0% 50%
-	}
-}
-
-@-moz-keyframes Gradient {
-	0% {
-		background-position: 0% 50%
-	}
-	50% {
-		background-position: 100% 50%
-	}
-	100% {
-		background-position: 0% 50%
-	}
-}
-
-@keyframes Gradient {
-	0% {
-		background-position: 0% 50%
-	}
-	50% {
-		background-position: 100% 50%
-	}
-	100% {
-		background-position: 0% 50%
-	}
-}
-
-.naslov3 {
-   position: absolute;
-   top: 33%;
-   width:40%;
-  margin-left:65px;
-  font-size:3vw;
-  font-family: 'Open Sans';
-   color: white;
-   text-align: left;
-}
-
-@media screen and (max-width: 600px) {
-    .navbar a{
-        width: 100%;
-        margin-top: 0;
-		 display: table;
-    clear: both;
-		
-    }
-
-	.naslov3 {
-   position: absolute;
-   top: 60%;
-   width:40%;
-  margin-left:65px;
-  font-size:5vw;
-  font-family: 'Open Sans';
-   color: white;
-   text-align: left;
-}
-
-.border {
-width:60%;
-margin-left:20%;
-display:block;
-
-}
-
-
-	
-}    
-   
-</style>
-
-<title>Dobro došli na website rent-a-car kompanije Teodora Car</title>
+  <title>Dobro došli na website rent-a-car kompanije Teodora Car</title>
 </head>
+
 <body class="scrollbar" id="style-7">
-<div class="naslov3">
+  <div class="naslov3">
     <p>Teodora car d.o.o <br> Dobrodošli na sajt najpoznatije rent-a-car kompanije</p>
   </div>
 
-<div class="bgimg-1">
+  <div class="bgimg-1">
 
-<!-- glavni meni -->
+    <!-- glavni meni -->
 
-<div class="navbar" style="margin-top:10px; margin-right:10px; border-radius:5px;">
- <a class="active" href="index.html">Naslovna</a> 
-  <a href="o_nama.html">O nama</a>
-  <a href="rezervacija.html">Rezervacija</a>
-  <a href="kontakt.html">Kontakt</a>
-</div>
-<img src="images/LOGO_INBACO.png" alt="LOGO_INBACO">
-
- 
-<br><br><br>
-  
-  
-<img src="images/car.png" alt="LOGO_INBACO" style="width:60%; float:right;"> 
-</div>
-
-<div style="color: #777;background-color:white;text-align:center;padding:50px 80px;text-align: justify; font: 400 15px/1.8 Lato, sans-serif;">
-  <h3 style="text-align:center; font-size:30px;">O nama...</h3>
-  <p>
-Teodora car doo se bavi auto-industrijom, sa iskustvom vlasnika od 1985.godine.
-Poslovanje se trenutno odnosi na :rent-a-car i prodaju autodelova sa uslugama autoservisa.
-
-Teodora car doo ima dugogodišnje iskustvo u iznajmljivanju vozila. 
-Vozila su pazljivo birana po sugestijama korisnika sa ekonomičnim dizel i benzinskim 
-motorima u raznim klasama, od malih gradskih, dostavnih do
-većih vozila sa 5+2 sedista, koji mogu biti sa  automatskim ili manuelnim menjačima.
-
-U okviru kompanije Teodora car d.o.o je <b><a href="https://www.macura.rs/kontakt" target="_blank" title="AUTO Servis Macura">autoservis</a></b>, ciji iskusan tim se brine o tehničkoj ispravnosti vozila. 
-Dužnost našeg tima je da se pobrine za vozilo na kraju svakog najma.
-Vozila dovozimo i preuzimamo na aerodromu ili na dogovorenim lokacijama.
-Poštujući Vaše vreme, izabrali smo najlakši i najbrži način rentiranja vozila. Vozilo koje Vi izaberete možete iznajmiti na našoj adresi
-kao i na beogradskom aerodromu Nikola Tesla, autobuskoj ili železničkoj stanici, ili nekj drugoj dogovorenoj lokaciji u vreme koje Vama najviše odgovara. 
-
-Preporučujemo blagovremene rezervacije, zbog velike potražnje, kako biste po dolasku u 
-Beograd ili po sletanju na aerodrom mogli da preuzmete vozilo.
-Rezervaciju možete uraditi telefonom, mail-om, skype-om, ili online preko našeg sajta.
-
-Verujemo da profesionalnim odnosom i izborom modela automobila i cena najma možemo postati i Vaš rent-a-car partner. Za stalne klijente, firme, dugoročne i trajne najmove nudimo posebne pogodnosti.
-</p>
-</div>
-
-<div class="bgimg-2">
-  <div class="caption" style="position:absolute; bottom: 0px">
-    <span class="border" style="background-color:gray;font-size:25px;color: #f7f7f7; text-align:center;"><a href="kontakt.html"style="color:white;">Rezervacija automobila</a></span>
-  </div>
-  <img src="images/14.png" alt="LOGO_INBACO" style="width:30%; margin-left:-8%; float:left; bottom:0px;"> 
-</div>
+    <div class="navbar" style="margin-top:10px; margin-right:10px; border-radius:5px;">
+      <a class="active" href="index.html">Naslovna</a>
+      <a href="o_nama.html">O nama</a>
+      <a href="rezervacija.html">Rezervacija</a>
+      <a href="kontakt.html">Kontakt</a>
+    </div>
+    <img src="images/LOGO_INBACO.png" alt="LOGO_INBACO">
 
 
-
-<!-- AUTOMOBILI1 -->
-
-<div class="deo_ekrana" >
-  <ul class="tabela_auto">
-    <li class="zaglavlje_tabele">Fiat Grande Punto <br><img src="images/punto_red_reservation.jpg" alt="Fiat Grande Punto" style="width:100%;"></li>
-    <li class="grey_polje"> <i>Crvena boja, 5 vrata<i></li>
-    <li><i class="fas fa-gas-pump" style="font-size:18px;"></i> &nbsp Gorivo: Diesel 1.3</li>
-    <li><i class="fa fa-automobile" style="font-size:18px;color:black"></i> &nbsp Menjač: manuelni</li>
-	<li><i class="fas fa-thermometer-half" style="font-size:18px;"></i> &nbsp Klima: DA</li>
-    <li><i class="far fa-hand-point-right" style="font-size:18px;color:black"></i> &nbsp <i class="fab fa-cc-visa" style="font-size:18px;color:black"></i> &nbsp <i class="fab fa-cc-mastercard" style="font-size:18px;color:black"></i> &nbsp <i class="far fa-credit-card" style="font-size:18px;color:black"></i></li>
-    <li>3-7 dana: 14&euro; / dan <br> 7+&nbsp;&nbsp; dana: 12&euro; / dan <br>  30+ dana: 10&euro; / dan</li>
-    <li class="grey"><a href="rezervacija.html" class="button_rezervisi" style="color:white; text-decoration:none;">Rezervacija</a></li>
-  </ul>
-</div>
-
-<div class="deo_ekrana">
-  <ul class="tabela_auto">
-    <li class="zaglavlje_tabele " style="background-color:#dd4b39">Fiat Grande Punto <br><img src="images/punto_white_reservation.jpg" alt="Fiat Grande Punto" style="width:100%;"></li>
-    <li class="grey_polje"> <i>Bela boja, 5 vrata<i></li>
-    <li><i class="fas fa-gas-pump" style="font-size:18px;"></i> &nbsp Gorivo: Diesel 1.3</li>
-    <li><i class="fa fa-automobile" style="font-size:18px;color:black"></i> &nbsp Menjač: manuelni</li>
-	<li><i class="fas fa-thermometer-half" style="font-size:18px;"></i> &nbsp Klima: DA</li>
-    <li><i class="far fa-hand-point-right" style="font-size:18px;color:black"></i> &nbsp <i class="fab fa-cc-visa" style="font-size:18px;color:black"></i> &nbsp <i class="fab fa-cc-mastercard" style="font-size:18px;color:black"></i> &nbsp <i class="far fa-credit-card" style="font-size:18px;color:black"></i></li>
-    <li>3-7 dana: 14&euro; / dan <br> 7+&nbsp;&nbsp; dana: 12&euro; / dan <br>  30+ dana: 10&euro; / dan</li>
-    <li class="grey"><a href="rezervacija.html" class="button_rezervisi" style="color:white; text-decoration:none;">Rezervacija</a></li>
-  </ul>
-</div>
-
-<div class="deo_ekrana">
-  <ul class="tabela_auto">
-    <li class="zaglavlje_tabele">Fiat Grande Punto <br><img src="images/punto_black_reservation.jpg" alt="Fiat Grande Punto" style="width:100%;"></li>
-    <li class="grey_polje"> <i>Crna boja, 5 vrata<i></li>
-    <li><i class="fas fa-gas-pump" style="font-size:18px;"></i> &nbsp Gorivo: Diesel 1.3</li>
-    <li><i class="fa fa-automobile" style="font-size:18px;color:black"></i> &nbsp Menjač: manuelni</li>
-	<li><i class="fas fa-thermometer-half" style="font-size:18px;"></i> &nbsp Klima: DA</li>
-    <li><i class="far fa-hand-point-right" style="font-size:18px;color:black"></i> &nbsp <i class="fab fa-cc-visa" style="font-size:18px;color:black"></i> &nbsp <i class="fab fa-cc-mastercard" style="font-size:18px;color:black"></i> &nbsp <i class="far fa-credit-card" style="font-size:18px;color:black"></i></li>
-    <li>3-7 dana: 14&euro; / dan <br> 7+&nbsp;&nbsp; dana: 12&euro; / dan <br>  30+ dana: 10&euro; / dan</li>
-    <li class="grey"><a href="rezervacija.html" class="button_rezervisi" style="color:white; text-decoration:none;">Rezervacija</a></li>
-  </ul>
-</div>
+    <br><br><br>
 
 
-<div class="deo_ekrana" >
-  <ul class="tabela_auto">
-    <li class="zaglavlje_tabele" style="background-color:#dd4b39">Fiat Grande Punto <br><img src="images/punto_blue_reservation.jpg" alt="Fiat Grande Punto" style="width:100%;"></li>
-    <li class="grey_polje"> <i>Plava boja, 5 vrata<i></li>
-    <li><i class="fas fa-gas-pump" style="font-size:18px;"></i> &nbsp Gorivo: Diesel 1.3</li>
-    <li><i class="fa fa-automobile" style="font-size:18px;color:black"></i> &nbsp Menjač: manuelni</li>
-	<li><i class="fas fa-thermometer-half" style="font-size:18px;"></i> &nbsp Klima: DA</li>
-    <li><i class="far fa-hand-point-right" style="font-size:18px;color:black"></i> &nbsp <i class="fab fa-cc-visa" style="font-size:18px;color:black"></i> &nbsp <i class="fab fa-cc-mastercard" style="font-size:18px;color:black"></i> &nbsp <i class="far fa-credit-card" style="font-size:18px;color:black"></i></li>
-    <li>3-7 dana: 14&euro; / dan <br> 7+&nbsp;&nbsp; dana: 12&euro; / dan <br>  30+ dana: 10&euro; / dan</li>
-    <li class="grey"><a href="rezervacija.html" class="button_rezervisi" style="color:white; text-decoration:none;">Rezervacija</a></li>
-  </ul>
-</div>
-
-<div class="deo_ekrana">
-  <ul class="tabela_auto">
-    <li class="zaglavlje_tabele" >Opel Astra karavan <br><img src="images/astra_grey_reservation.jpg" alt="Avatar" style="width:100%;"></li>
-    <li class="grey_polje"> <i>Siva boja, 5 vrata<i></li>
-    <li><i class="fas fa-gas-pump" style="font-size:18px;"></i> &nbsp Gorivo: Diesel 1.6</li>
-    <li><i class="fa fa-automobile" style="font-size:18px;color:black"></i> &nbsp Menjač: manuelni</li>
-	<li><i class="fas fa-thermometer-half" style="font-size:18px;"></i> &nbsp Klima: DA</li>
-    <li><i class="far fa-hand-point-right" style="font-size:18px;color:black"></i> &nbsp <i class="fab fa-cc-visa" style="font-size:18px;color:black"></i> &nbsp <i class="fab fa-cc-mastercard" style="font-size:18px;color:black"></i> &nbsp <i class="far fa-credit-card" style="font-size:18px;color:black"></i></li>
-    <li>3-7 dana: 19&euro; / dan <br> 7+&nbsp;&nbsp; dana: 17&euro; / dan <br>  30+ dana: 16&euro; / dan</li>
-    <li class="grey"><a href="rezervacija.html" class="button_rezervisi" style="color:white; text-decoration:none;">Rezervacija</a></li>
-  </ul>
-</div>
-
-<div class="deo_ekrana">
-  <ul class="tabela_auto">
-    <li class="zaglavlje_tabele" style="background-color:#dd4b39">Opel Astra karavan <br><img src="images/astra_white_reservation.jpg" alt="Avatar" style="width:100%;"></li>
-    <li class="grey_polje"> <i>Bela boja, 5 vrata<i></li>
-    <li><i class="fas fa-gas-pump" style="font-size:18px;"></i> &nbsp Gorivo: Diesel 1.6</li>
-    <li><i class="fa fa-automobile" style="font-size:18px;color:black"></i> &nbsp Menjač: manuelni</li>
-	<li><i class="fas fa-thermometer-half" style="font-size:18px;"></i> &nbsp Klima: DA</li>
-    <li><i class="far fa-hand-point-right" style="font-size:18px;color:black"></i> &nbsp <i class="fab fa-cc-visa" style="font-size:18px;color:black"></i> &nbsp <i class="fab fa-cc-mastercard" style="font-size:18px;color:black"></i> &nbsp <i class="far fa-credit-card" style="font-size:18px;color:black"></i></li>
-    <li>3-7 dana: 16&euro; / dan <br> 7+&nbsp;&nbsp; dana: 14&euro; / dan <br>  30+ dana: 12&euro; / dan</li>
-    <li class="grey"><a href="rezervacija.html" class="button_rezervisi" style="color:white; text-decoration:none;">Rezervacija</a></li>
-  </ul>
-</div>
-
-<div class="deo_ekrana" >
-  <ul class="tabela_auto">
-    <li class="zaglavlje_tabele">Opel Insignia karavan <br><img src="images/insignia_white_reservation.jpg" alt="Avatar" style="width:100%;"></li>
-    <li class="grey_polje"> <i>Bela boja, 5 vrata<i></li>
-    <li><i class="fas fa-gas-pump" style="font-size:18px;"></i> &nbsp Gorivo: Diesel 2.0</li>
-    <li><i class="fa fa-automobile" style="font-size:18px;color:black"></i> &nbsp Menjač: automatski</li>
-	<li><i class="fas fa-thermometer-half" style="font-size:18px;"></i> &nbsp Klima: DA</li>
-    <li><i class="far fa-hand-point-right" style="font-size:18px;color:black"></i> &nbsp <i class="fab fa-cc-visa" style="font-size:18px;color:black"></i> &nbsp <i class="fab fa-cc-mastercard" style="font-size:18px;color:black"></i> &nbsp <i class="far fa-credit-card" style="font-size:18px;color:black"></i></li>
-    <li>3-7 dana: 29&euro; / dan <br> 7+&nbsp;&nbsp; dana: 27&euro; / dan <br>  30+ dana: 25&euro; / dan</li>
-    <li class="grey"><a href="rezervacija.html" class="button_rezervisi" style="color:white; text-decoration:none;">Rezervacija</a></li>
-  </ul>
-</div>
-
-<div class="deo_ekrana">
-  <ul class="tabela_auto">
-    <li class="zaglavlje_tabele" style="background-color:#dd4b39">Opel Insignia karavan <br><img src="images/insignia_black_reservation.jpg" alt="Avatar" style="width:100%;"></li>
-    <li class="grey_polje"> <i>Crna boja, 5 vrata<i></li>
-    <li><i class="fas fa-gas-pump" style="font-size:18px;"></i> &nbsp Gorivo: Diesel 2.0</li>
-    <li><i class="fa fa-automobile" style="font-size:18px;color:black"></i> &nbsp Menjač: automatski</li>
-	<li><i class="fas fa-thermometer-half" style="font-size:18px;"></i> &nbsp Klima: DA</li>
-    <li><i class="far fa-hand-point-right" style="font-size:18px;color:black"></i> &nbsp <i class="fab fa-cc-visa" style="font-size:18px;color:black"></i> &nbsp <i class="fab fa-cc-mastercard" style="font-size:18px;color:black"></i> &nbsp <i class="far fa-credit-card" style="font-size:18px;color:black"></i></li>
-    <li>3-7 dana: 29&euro; / dan <br> 7+&nbsp;&nbsp; dana: 27&euro; / dan <br>  30+ dana: 25&euro; / dan</li>
-    <li class="grey"><a href="rezervacija.html" class="button_rezervisi" style="color:white; text-decoration:none;">Rezervacija</a></li>
-  </ul>
-</div>
-
-<div class="deo_ekrana">
-  <ul class="tabela_auto">
-    <li class="zaglavlje_tabele">Peugeot 308 <br><img src="images/peugeot_reservation.jpg" alt="Avatar" style="width:100%;"></li>
-    <li class="grey_polje"> <i>Siva boja, 5 vrata<i></li>
-    <li><i class="fas fa-gas-pump" style="font-size:18px;"></i> &nbsp Gorivo: Benzin 1.4</li>
-    <li><i class="fa fa-automobile" style="font-size:18px;color:black"></i> &nbsp Menjač: manuelni</li>
-	<li><i class="fas fa-thermometer-half" style="font-size:18px;"></i> &nbsp Klima: DA</li>
-    <li><i class="far fa-hand-point-right" style="font-size:18px;color:black"></i> &nbsp <i class="fab fa-cc-visa" style="font-size:18px;color:black"></i> &nbsp <i class="fab fa-cc-mastercard" style="font-size:18px;color:black"></i> &nbsp <i class="far fa-credit-card" style="font-size:18px;color:black"></i></li>
-    <li>3-7 dana: 19&euro; / dan <br> 7+&nbsp;&nbsp; dana: 17&euro; / dan <br>  30+ dana: 16&euro; / dan</li>
-    <li class="grey"><a href="rezervacija.html" class="button_rezervisi" style="color:white; text-decoration:none;">Rezervacija</a></li>
-  </ul>
-</div>
-
-
-
-
-  <div style="color:#ddd;background: url(punto2.jpg) no-repeat center center fixed; background-size: cover;text-align:center;padding:50px 80px;text-align: justify; font: 400 15px/1.8 Lato, sans-serif;">
-    <p>Teodora car d.o.o. 
-  </p>
+    <img src="images/car.png" alt="LOGO_INBACO" style="width:60%; float:right;">
   </div>
 
-<div class="footer">
-  <div class="row">
-  <div class="column">
-    <div class="card">
-      <p><i class="fa fa-automobile"></i></p>
-      <h3>500+</h3>
-      <p>Uspešno realizovanih vožnji</p>
+  <div
+    style="color: #777;background-color:white;text-align:center;padding:50px 80px;text-align: justify; font: 400 15px/1.8 Lato, sans-serif;">
+    <h3 style="text-align:center; font-size:30px;">O nama...</h3>
+    <p>
+      Teodora car doo se bavi auto-industrijom, sa iskustvom vlasnika od 1985.godine.
+      Poslovanje se trenutno odnosi na :rent-a-car i prodaju autodelova sa uslugama autoservisa.
+
+      Teodora car doo ima dugogodišnje iskustvo u iznajmljivanju vozila.
+      Vozila su pazljivo birana po sugestijama korisnika sa ekonomičnim dizel i benzinskim
+      motorima u raznim klasama, od malih gradskih, dostavnih do
+      većih vozila sa 5+2 sedista, koji mogu biti sa automatskim ili manuelnim menjačima.
+
+      U okviru kompanije Teodora car d.o.o je <b><a href="https://www.macura.rs/kontakt" target="_blank"
+          title="AUTO Servis Macura">autoservis</a></b>, ciji iskusan tim se brine o tehničkoj ispravnosti vozila.
+      Dužnost našeg tima je da se pobrine za vozilo na kraju svakog najma.
+      Vozila dovozimo i preuzimamo na aerodromu ili na dogovorenim lokacijama.
+      Poštujući Vaše vreme, izabrali smo najlakši i najbrži način rentiranja vozila. Vozilo koje Vi izaberete možete
+      iznajmiti na našoj adresi
+      kao i na beogradskom aerodromu Nikola Tesla, autobuskoj ili železničkoj stanici, ili nekj drugoj dogovorenoj
+      lokaciji u vreme koje Vama najviše odgovara.
+
+      Preporučujemo blagovremene rezervacije, zbog velike potražnje, kako biste po dolasku u
+      Beograd ili po sletanju na aerodrom mogli da preuzmete vozilo.
+      Rezervaciju možete uraditi telefonom, mail-om, skype-om, ili online preko našeg sajta.
+
+      Verujemo da profesionalnim odnosom i izborom modela automobila i cena najma možemo postati i Vaš rent-a-car
+      partner. Za stalne klijente, firme, dugoročne i trajne najmove nudimo posebne pogodnosti.
+    </p>
+  </div>
+
+  <div class="bgimg-2">
+    <div class="caption" style="position:absolute; bottom: 0px">
+      <span class="border" style="background-color:gray;font-size:25px;color: #f7f7f7; text-align:center;"><a
+          href="kontakt.html" style="color:white;">Rezervacija automobila</a></span>
+    </div>
+    <img src="images/14.png" alt="LOGO_INBACO" style="width:30%; margin-left:-8%; float:left; bottom:0px;">
+  </div>
+
+
+
+  <!-- AUTOMOBILI1 -->
+
+  <div class="deo_ekrana">
+    <ul class="tabela_auto">
+      <li class="zaglavlje_tabele">Fiat Grande Punto <br><img src="images/punto_red_reservation.jpg"
+          alt="Fiat Grande Punto" style="width:100%;"></li>
+      <li class="grey_polje"> <i>Crvena boja, 5 vrata<i></li>
+      <li><i class="fas fa-gas-pump" style="font-size:18px;"></i> &nbsp Gorivo: Diesel 1.3</li>
+      <li><i class="fa fa-automobile" style="font-size:18px;color:black"></i> &nbsp Menjač: manuelni</li>
+      <li><i class="fas fa-thermometer-half" style="font-size:18px;"></i> &nbsp Klima: DA</li>
+      <li><i class="far fa-hand-point-right" style="font-size:18px;color:black"></i> &nbsp <i class="fab fa-cc-visa"
+          style="font-size:18px;color:black"></i> &nbsp <i class="fab fa-cc-mastercard"
+          style="font-size:18px;color:black"></i> &nbsp <i class="far fa-credit-card"
+          style="font-size:18px;color:black"></i></li>
+      <li>3-7 dana: 14&euro; / dan <br> 7+&nbsp;&nbsp; dana: 12&euro; / dan <br> 30+ dana: 10&euro; / dan</li>
+      <li class="grey"><a href="rezervacija.html" class="button_rezervisi"
+          style="color:white; text-decoration:none;">Rezervacija</a></li>
+    </ul>
+  </div>
+
+  <div class="deo_ekrana">
+    <ul class="tabela_auto">
+      <li class="zaglavlje_tabele " style="background-color:#dd4b39">Fiat Grande Punto <br><img
+          src="images/punto_white_reservation.jpg" alt="Fiat Grande Punto" style="width:100%;"></li>
+      <li class="grey_polje"> <i>Bela boja, 5 vrata<i></li>
+      <li><i class="fas fa-gas-pump" style="font-size:18px;"></i> &nbsp Gorivo: Diesel 1.3</li>
+      <li><i class="fa fa-automobile" style="font-size:18px;color:black"></i> &nbsp Menjač: manuelni</li>
+      <li><i class="fas fa-thermometer-half" style="font-size:18px;"></i> &nbsp Klima: DA</li>
+      <li><i class="far fa-hand-point-right" style="font-size:18px;color:black"></i> &nbsp <i class="fab fa-cc-visa"
+          style="font-size:18px;color:black"></i> &nbsp <i class="fab fa-cc-mastercard"
+          style="font-size:18px;color:black"></i> &nbsp <i class="far fa-credit-card"
+          style="font-size:18px;color:black"></i></li>
+      <li>3-7 dana: 14&euro; / dan <br> 7+&nbsp;&nbsp; dana: 12&euro; / dan <br> 30+ dana: 10&euro; / dan</li>
+      <li class="grey"><a href="rezervacija.html" class="button_rezervisi"
+          style="color:white; text-decoration:none;">Rezervacija</a></li>
+    </ul>
+  </div>
+
+  <div class="deo_ekrana">
+    <ul class="tabela_auto">
+      <li class="zaglavlje_tabele">Fiat Grande Punto <br><img src="images/punto_black_reservation.jpg"
+          alt="Fiat Grande Punto" style="width:100%;"></li>
+      <li class="grey_polje"> <i>Crna boja, 5 vrata<i></li>
+      <li><i class="fas fa-gas-pump" style="font-size:18px;"></i> &nbsp Gorivo: Diesel 1.3</li>
+      <li><i class="fa fa-automobile" style="font-size:18px;color:black"></i> &nbsp Menjač: manuelni</li>
+      <li><i class="fas fa-thermometer-half" style="font-size:18px;"></i> &nbsp Klima: DA</li>
+      <li><i class="far fa-hand-point-right" style="font-size:18px;color:black"></i> &nbsp <i class="fab fa-cc-visa"
+          style="font-size:18px;color:black"></i> &nbsp <i class="fab fa-cc-mastercard"
+          style="font-size:18px;color:black"></i> &nbsp <i class="far fa-credit-card"
+          style="font-size:18px;color:black"></i></li>
+      <li>3-7 dana: 14&euro; / dan <br> 7+&nbsp;&nbsp; dana: 12&euro; / dan <br> 30+ dana: 10&euro; / dan</li>
+      <li class="grey"><a href="rezervacija.html" class="button_rezervisi"
+          style="color:white; text-decoration:none;">Rezervacija</a></li>
+    </ul>
+  </div>
+
+
+  <div class="deo_ekrana">
+    <ul class="tabela_auto">
+      <li class="zaglavlje_tabele" style="background-color:#dd4b39">Fiat Grande Punto <br><img
+          src="images/punto_blue_reservation.jpg" alt="Fiat Grande Punto" style="width:100%;"></li>
+      <li class="grey_polje"> <i>Plava boja, 5 vrata<i></li>
+      <li><i class="fas fa-gas-pump" style="font-size:18px;"></i> &nbsp Gorivo: Diesel 1.3</li>
+      <li><i class="fa fa-automobile" style="font-size:18px;color:black"></i> &nbsp Menjač: manuelni</li>
+      <li><i class="fas fa-thermometer-half" style="font-size:18px;"></i> &nbsp Klima: DA</li>
+      <li><i class="far fa-hand-point-right" style="font-size:18px;color:black"></i> &nbsp <i class="fab fa-cc-visa"
+          style="font-size:18px;color:black"></i> &nbsp <i class="fab fa-cc-mastercard"
+          style="font-size:18px;color:black"></i> &nbsp <i class="far fa-credit-card"
+          style="font-size:18px;color:black"></i></li>
+      <li>3-7 dana: 14&euro; / dan <br> 7+&nbsp;&nbsp; dana: 12&euro; / dan <br> 30+ dana: 10&euro; / dan</li>
+      <li class="grey"><a href="rezervacija.html" class="button_rezervisi"
+          style="color:white; text-decoration:none;">Rezervacija</a></li>
+    </ul>
+  </div>
+
+  <div class="deo_ekrana">
+    <ul class="tabela_auto">
+      <li class="zaglavlje_tabele">Opel Astra karavan <br><img src="images/astra_grey_reservation.jpg" alt="Avatar"
+          style="width:100%;"></li>
+      <li class="grey_polje"> <i>Siva boja, 5 vrata<i></li>
+      <li><i class="fas fa-gas-pump" style="font-size:18px;"></i> &nbsp Gorivo: Diesel 1.6</li>
+      <li><i class="fa fa-automobile" style="font-size:18px;color:black"></i> &nbsp Menjač: manuelni</li>
+      <li><i class="fas fa-thermometer-half" style="font-size:18px;"></i> &nbsp Klima: DA</li>
+      <li><i class="far fa-hand-point-right" style="font-size:18px;color:black"></i> &nbsp <i class="fab fa-cc-visa"
+          style="font-size:18px;color:black"></i> &nbsp <i class="fab fa-cc-mastercard"
+          style="font-size:18px;color:black"></i> &nbsp <i class="far fa-credit-card"
+          style="font-size:18px;color:black"></i></li>
+      <li>3-7 dana: 19&euro; / dan <br> 7+&nbsp;&nbsp; dana: 17&euro; / dan <br> 30+ dana: 16&euro; / dan</li>
+      <li class="grey"><a href="rezervacija.html" class="button_rezervisi"
+          style="color:white; text-decoration:none;">Rezervacija</a></li>
+    </ul>
+  </div>
+
+  <div class="deo_ekrana">
+    <ul class="tabela_auto">
+      <li class="zaglavlje_tabele" style="background-color:#dd4b39">Opel Astra karavan <br><img
+          src="images/astra_white_reservation.jpg" alt="Avatar" style="width:100%;"></li>
+      <li class="grey_polje"> <i>Bela boja, 5 vrata<i></li>
+      <li><i class="fas fa-gas-pump" style="font-size:18px;"></i> &nbsp Gorivo: Diesel 1.6</li>
+      <li><i class="fa fa-automobile" style="font-size:18px;color:black"></i> &nbsp Menjač: manuelni</li>
+      <li><i class="fas fa-thermometer-half" style="font-size:18px;"></i> &nbsp Klima: DA</li>
+      <li><i class="far fa-hand-point-right" style="font-size:18px;color:black"></i> &nbsp <i class="fab fa-cc-visa"
+          style="font-size:18px;color:black"></i> &nbsp <i class="fab fa-cc-mastercard"
+          style="font-size:18px;color:black"></i> &nbsp <i class="far fa-credit-card"
+          style="font-size:18px;color:black"></i></li>
+      <li>3-7 dana: 16&euro; / dan <br> 7+&nbsp;&nbsp; dana: 14&euro; / dan <br> 30+ dana: 12&euro; / dan</li>
+      <li class="grey"><a href="rezervacija.html" class="button_rezervisi"
+          style="color:white; text-decoration:none;">Rezervacija</a></li>
+    </ul>
+  </div>
+
+  <div class="deo_ekrana">
+    <ul class="tabela_auto">
+      <li class="zaglavlje_tabele">Opel Insignia karavan <br><img src="images/insignia_white_reservation.jpg"
+          alt="Avatar" style="width:100%;"></li>
+      <li class="grey_polje"> <i>Bela boja, 5 vrata<i></li>
+      <li><i class="fas fa-gas-pump" style="font-size:18px;"></i> &nbsp Gorivo: Diesel 2.0</li>
+      <li><i class="fa fa-automobile" style="font-size:18px;color:black"></i> &nbsp Menjač: automatski</li>
+      <li><i class="fas fa-thermometer-half" style="font-size:18px;"></i> &nbsp Klima: DA</li>
+      <li><i class="far fa-hand-point-right" style="font-size:18px;color:black"></i> &nbsp <i class="fab fa-cc-visa"
+          style="font-size:18px;color:black"></i> &nbsp <i class="fab fa-cc-mastercard"
+          style="font-size:18px;color:black"></i> &nbsp <i class="far fa-credit-card"
+          style="font-size:18px;color:black"></i></li>
+      <li>3-7 dana: 29&euro; / dan <br> 7+&nbsp;&nbsp; dana: 27&euro; / dan <br> 30+ dana: 25&euro; / dan</li>
+      <li class="grey"><a href="rezervacija.html" class="button_rezervisi"
+          style="color:white; text-decoration:none;">Rezervacija</a></li>
+    </ul>
+  </div>
+
+  <div class="deo_ekrana">
+    <ul class="tabela_auto">
+      <li class="zaglavlje_tabele" style="background-color:#dd4b39">Opel Insignia karavan <br><img
+          src="images/insignia_black_reservation.jpg" alt="Avatar" style="width:100%;"></li>
+      <li class="grey_polje"> <i>Crna boja, 5 vrata<i></li>
+      <li><i class="fas fa-gas-pump" style="font-size:18px;"></i> &nbsp Gorivo: Diesel 2.0</li>
+      <li><i class="fa fa-automobile" style="font-size:18px;color:black"></i> &nbsp Menjač: automatski</li>
+      <li><i class="fas fa-thermometer-half" style="font-size:18px;"></i> &nbsp Klima: DA</li>
+      <li><i class="far fa-hand-point-right" style="font-size:18px;color:black"></i> &nbsp <i class="fab fa-cc-visa"
+          style="font-size:18px;color:black"></i> &nbsp <i class="fab fa-cc-mastercard"
+          style="font-size:18px;color:black"></i> &nbsp <i class="far fa-credit-card"
+          style="font-size:18px;color:black"></i></li>
+      <li>3-7 dana: 29&euro; / dan <br> 7+&nbsp;&nbsp; dana: 27&euro; / dan <br> 30+ dana: 25&euro; / dan</li>
+      <li class="grey"><a href="rezervacija.html" class="button_rezervisi"
+          style="color:white; text-decoration:none;">Rezervacija</a></li>
+    </ul>
+  </div>
+
+  <div class="deo_ekrana">
+    <ul class="tabela_auto">
+      <li class="zaglavlje_tabele">Peugeot 308 <br><img src="images/peugeot_reservation.jpg" alt="Avatar"
+          style="width:100%;"></li>
+      <li class="grey_polje"> <i>Siva boja, 5 vrata<i></li>
+      <li><i class="fas fa-gas-pump" style="font-size:18px;"></i> &nbsp Gorivo: Benzin 1.4</li>
+      <li><i class="fa fa-automobile" style="font-size:18px;color:black"></i> &nbsp Menjač: manuelni</li>
+      <li><i class="fas fa-thermometer-half" style="font-size:18px;"></i> &nbsp Klima: DA</li>
+      <li><i class="far fa-hand-point-right" style="font-size:18px;color:black"></i> &nbsp <i class="fab fa-cc-visa"
+          style="font-size:18px;color:black"></i> &nbsp <i class="fab fa-cc-mastercard"
+          style="font-size:18px;color:black"></i> &nbsp <i class="far fa-credit-card"
+          style="font-size:18px;color:black"></i></li>
+      <li>3-7 dana: 19&euro; / dan <br> 7+&nbsp;&nbsp; dana: 17&euro; / dan <br> 30+ dana: 16&euro; / dan</li>
+      <li class="grey"><a href="rezervacija.html" class="button_rezervisi"
+          style="color:white; text-decoration:none;">Rezervacija</a></li>
+    </ul>
+  </div>
+
+
+
+
+  <div
+    style="color:#ddd;background: url(punto2.jpg) no-repeat center center fixed; background-size: cover;text-align:center;padding:50px 80px;text-align: justify; font: 400 15px/1.8 Lato, sans-serif;">
+    <p>Teodora car d.o.o.
+    </p>
+  </div>
+
+  <div class="footer">
+    <div class="row">
+      <div class="column">
+        <div class="card">
+          <p><i class="fa fa-automobile"></i></p>
+          <h3>500+</h3>
+          <p>Uspešno realizovanih vožnji</p>
+        </div>
+      </div>
+
+      <div class="column">
+        <div class="card">
+          <p><i class="fa fa-check"></i></p>
+          <h3>500+</h3>
+          <p>Realizovanih ugovora</p>
+        </div>
+      </div>
+
+      <div class="column">
+        <div class="card">
+          <p><i class="fa fa-smile-o"></i></p>
+          <h3>500+</h3>
+          <p>Zadovoljnih klijenata</p>
+        </div>
+      </div>
+
+      <div class="column">
+        <div class="card">
+          <p><i class="fa fa-handshake-o"></i></p>
+          <h3>1000+</h3>
+          <p>Budućih uspešnih ugovora</p>
+        </div>
+      </div>
     </div>
   </div>
 
-  <div class="column">
-    <div class="card">
-      <p><i class="fa fa-check"></i></p>
-      <h3>500+</h3>
-      <p>Realizovanih ugovora</p>
+  </div>
+
+  <div class="bgimg-3">
+
+    <div class="slideshow-container2">
+
+      <div class="mySlides2">
+        <q>Stvarno sve pohvale za rent-a-car usluge, automobili su savršeni, a osoblje ljubazno!</q>
+        <p class="author">- Jovan -</p>
+      </div>
+
+      <div class="mySlides2">
+        <q>Najbrzi način da dođete do automobila, uvek prijatni i na usluzi. Samo tako nastavite! </q>
+        <p class="author">- Mira -</p>
+      </div>
+
+      <div class="mySlides2">
+        <q>Sigurno među finansijski najboljim ponudama u gradu... Sve preporuke...</q>
+        <p class="author">- Darko -</p>
+      </div>
+
+      <a class="prev" onclick="plusSlides(-1)">❮</a>
+      <a class="next" onclick="plusSlides(1)">❯</a>
+
     </div>
-  </div>
-  
-  <div class="column">
-    <div class="card">
-      <p><i class="fa fa-smile-o"></i></p>
-      <h3>500+</h3>
-      <p>Zadovoljnih klijenata</p>
+
+    <div class="dot-container2">
+      <span class="dot2" onclick="currentSlide(1)"></span>
+      <span class="dot2" onclick="currentSlide(2)"></span>
+      <span class="dot2" onclick="currentSlide(3)"></span>
     </div>
-  </div>
-  
-  <div class="column">
-    <div class="card">
-      <p><i class="fa fa-handshake-o"></i></p>
-      <h3>1000+</h3>
-      <p>Budućih uspešnih ugovora</p>
-    </div>
-  </div>
-</div>
-</div>  
- 
-</div>
 
-<div class="bgimg-3">
-  
-  <div class="slideshow-container2">
-
-<div class="mySlides2">
-  <q>Stvarno sve pohvale za rent-a-car usluge, automobili su savršeni, a osoblje ljubazno!</q>
-  <p class="author">- Jovan -</p>
-</div>
-
-<div class="mySlides2">
-  <q>Najbrzi način da dođete do automobila, uvek prijatni i na usluzi. Samo tako nastavite! </q>
-  <p class="author">- Mira -</p>
-</div>
-
-<div class="mySlides2">
-  <q>Sigurno među finansijski najboljim ponudama u gradu... Sve preporuke...</q>
-  <p class="author">- Darko -</p>
-</div>
-
-<a class="prev" onclick="plusSlides(-1)">❮</a>
-<a class="next" onclick="plusSlides(1)">❯</a>
-
-</div>
-
-<div class="dot-container2">
-  <span class="dot2" onclick="currentSlide(1)"></span> 
-  <span class="dot2" onclick="currentSlide(2)"></span> 
-  <span class="dot2" onclick="currentSlide(3)"></span> 
-</div>
-
-<div class="caption" style="position:relative; bottom: 0px">
-    <span class="border" style="background-color:gray;font-size:25px;color: #f7f7f7; border-radius:20px; text-align:center;">Utisci korisnika</span>
-  </div>
-</div>
-
-
-
-
-
-
-<div style="position:relative;">
-
-  <div style="color:#ddd;background-color:#282E34;text-align:center;padding:50px 80px;text-align: justify; font: 400 15px/1.8 Lato, sans-serif;">
-    <h3 style="text-align:center; font-size:30px;">Teodora Auto Servis</h3>
-	<p>Poverite svoj automobil profesionalcima!
-
-Teodora AUTOSERVIS sa iskustvom koje datira od davne 1985.god.
-
-Servis je opremljen savremenim dizalicama i alatima za lakšu dijagnostiku i popravku vozila.
-
-Opredeljenje je da radimo usluge brzog servisa kao sto su popravke: trapa, kočnica, amortizera, 
-veliki i mali servis motora, setova kvačila, montaža guma i slično.
-
-Ugovori sa velikim uvoznicima kvalitetnih autodelova, certifikati, tehnička obuka - međunarodno priznata, garantuje sigurnost i bezbednost vozila.
-
-Pogledajte robne marke sa garancijom kvaliteta na našem sajtu DELOVI ZA VOZILA koje 
-preporučujemo i za koje imamo ugovorno ovlašćenje za ugradnju, a ugrađujemo i delove koje Vi donesete.
-
-AKCIJE koje se menjaju mesečno možete pratiti na našem sajtu www.autotrap.rs , očekuju Vas dnevna iznenađenja za BESPLATNE USLUGE PREGLEDA I UGRADNJE DELOVA!
-
-METALOSTRUGARSKE USLUGE radimo po nacrtima i potrebama!
-</p>
-<div class="slideshow-container">
-
-<div class="mySlides fade">
-  <div class="numbertext">1 / 3</div>
-  <img src="images/servis.jpg" style="width:100%">
-  <div class="text"></div>
-</div>
-
-<div class="mySlides fade">
-  <div class="numbertext">2 / 3</div>
-  <img src="images/punto2.jpg" style="width:100%">
-  <div class="text"></div>
-</div>
-
-<div class="mySlides fade">
-  <div class="numbertext">3 / 3</div>
-  <img src="images/astra5.jpg" style="width:100%">
-  <div class="text">Kompanija Teodora Car D.O.O</div>
-</div>
-
-</div>
-<br>
-
-<div style="text-align:center">
-  <span class="dot"></span> 
-  <span class="dot"></span> 
-  <span class="dot"></span> 
-</div>
-  </div>
-  
-</div>
-
-
-<div class="bgimg-2" style="color:#ddd;background: url(images/lokacija_inbaco.jpg) no-repeat; background-size: cover;">
-  <div class="caption">
-    <span class="border" style='text-align:center;'>DO KOLA LAKO UZ Teodora Renta Car!</span>
-  </div>
-  
-</div>
-<!-- FOOTER -->
-
-<div class="footer2" style="font-family: Arial, Helvetica, sans-serif;">
-  <div class="row2">
-  <div class="column2">
-    <div class="card2">
-      <p><i class="fa fa-map-marker" style="font-size: 50px;"></i></p>
-      <h3>Teodora d.o.o RENT A CAR</h3>
-      <p>Prizrenska 29, 11080 Zemun</p>
-	  <p>Radno vreme: <br>ponedeljak-petak 8-17h <br> subota 8-14h</p>
+    <div class="caption" style="position:relative; bottom: 0px">
+      <span class="border"
+        style="background-color:gray;font-size:25px;color: #f7f7f7; border-radius:20px; text-align:center;">Utisci
+        korisnika</span>
     </div>
   </div>
 
-  <div class="column2">
-    <div class="card2">
-      <p><i class="fa fa-phone" style="font-size: 50px;"></i></p>
-      <h3>Telefoni</h3>
-      <p>011/3166770</p>
-	  <p>011/3166771</p>
-	  <p>011/3166772</p>
+
+
+
+
+
+  <div style="position:relative;">
+
+    <div
+      style="color:#ddd;background-color:#282E34;text-align:center;padding:50px 80px;text-align: justify; font: 400 15px/1.8 Lato, sans-serif;">
+      <h3 style="text-align:center; font-size:30px;">Teodora Auto Servis</h3>
+      <p>Poverite svoj automobil profesionalcima!
+
+        Teodora AUTOSERVIS sa iskustvom koje datira od davne 1985.god.
+
+        Servis je opremljen savremenim dizalicama i alatima za lakšu dijagnostiku i popravku vozila.
+
+        Opredeljenje je da radimo usluge brzog servisa kao sto su popravke: trapa, kočnica, amortizera,
+        veliki i mali servis motora, setova kvačila, montaža guma i slično.
+
+        Ugovori sa velikim uvoznicima kvalitetnih autodelova, certifikati, tehnička obuka - međunarodno priznata,
+        garantuje sigurnost i bezbednost vozila.
+
+        Pogledajte robne marke sa garancijom kvaliteta na našem sajtu DELOVI ZA VOZILA koje
+        preporučujemo i za koje imamo ugovorno ovlašćenje za ugradnju, a ugrađujemo i delove koje Vi donesete.
+
+        AKCIJE koje se menjaju mesečno možete pratiti na našem sajtu www.autotrap.rs , očekuju Vas dnevna iznenađenja za
+        BESPLATNE USLUGE PREGLEDA I UGRADNJE DELOVA!
+
+        METALOSTRUGARSKE USLUGE radimo po nacrtima i potrebama!
+      </p>
+      <div class="slideshow-container">
+
+        <div class="mySlides fade">
+          <div class="numbertext">1 / 3</div>
+          <img src="images/servis.jpg" style="width:100%">
+          <div class="text"></div>
+        </div>
+
+        <div class="mySlides fade">
+          <div class="numbertext">2 / 3</div>
+          <img src="images/punto2.jpg" style="width:100%">
+          <div class="text"></div>
+        </div>
+
+        <div class="mySlides fade">
+          <div class="numbertext">3 / 3</div>
+          <img src="images/astra5.jpg" style="width:100%">
+          <div class="text">Kompanija Teodora Car D.O.O</div>
+        </div>
+
+      </div>
+      <br>
+
+      <div style="text-align:center">
+        <span class="dot"></span>
+        <span class="dot"></span>
+        <span class="dot"></span>
+      </div>
+    </div>
+
+  </div>
+
+
+  <div class="bgimg-2"
+    style="color:#ddd;background: url(images/lokacija_inbaco.jpg) no-repeat; background-size: cover;">
+    <div class="caption">
+      <span class="border" style='text-align:center;'>DO KOLA LAKO UZ Teodora Renta Car!</span>
+    </div>
+
+  </div>
+  <!-- FOOTER -->
+
+  <div class="footer2" style="font-family: Arial, Helvetica, sans-serif;">
+    <div class="row2">
+      <div class="column2">
+        <div class="card2">
+          <p><i class="fa fa-map-marker" style="font-size: 50px;"></i></p>
+          <h3>Teodora d.o.o RENT A CAR</h3>
+          <p>Prizrenska 29, 11080 Zemun</p>
+          <p>Radno vreme: <br>ponedeljak-petak 8-17h <br> subota 8-14h</p>
+        </div>
+      </div>
+
+      <div class="column2">
+        <div class="card2">
+          <p><i class="fa fa-phone" style="font-size: 50px;"></i></p>
+          <h3>Telefoni</h3>
+          <p>011/3166770</p>
+          <p>011/3166771</p>
+          <p>011/3166772</p>
+        </div>
+      </div>
+
+      <div class="column2">
+        <div class="card2">
+          <p><i class="fa fa-envelope" style="font-size: 50px;"></i></p>
+          <h3>Kontaktirajte nas</h3>
+          <p>E-mail: teodorao@gmail.rs</p>
+          <p>Website: www.teodorarentacar.rs</p>
+        </div>
+      </div>
+
     </div>
   </div>
-  
-  <div class="column2">
-    <div class="card2">
-      <p><i class="fa fa-envelope" style="font-size: 50px;"></i></p>
-      <h3>Kontaktirajte nas</h3>
-      <p>E-mail: teodorao@gmail.rs</p>
-	  <p>Website: www.teodorarentacar.rs</p>
-    </div>
+
+  <div id="mySidenav" class="sidenav">
+    <a href="https://www.facebook.com/" id="facebook" target="_blank">facebook &nbsp <i class="fa fa-facebook-official"
+        style="font-size: 20px;"> </i></a>
+    <a href="#" id="youtube" target="_blank">youtube &nbsp &nbsp <i class="fa fa-youtube"
+        style="font-size: 20px;"></i></a>
+    <a href="https://www.instagram.com/" id="instagram" target="_blank">instagram <i class="fa fa-instagram"
+        style="font-size: 20px;"></i></a>
+    <a href="https://www.macura.rs/kontakt" id="servis" target="_blank">servis&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp <i
+        class="fas fa-car" style="font-size: 20px;"> </i></a>
   </div>
-  
-  
-  
-</div>
-</div>
-
-
-
-<div id="mySidenav" class="sidenav">
-  <a href="https://www.facebook.com/" id="facebook" target="_blank">facebook &nbsp <i class="fa fa-facebook-official" style="font-size: 20px;"> </i></a>
-  <a href="#" id="youtube" target="_blank">youtube &nbsp &nbsp <i class="fa fa-youtube" style="font-size: 20px;"></i></a>
-  <a href="https://www.instagram.com/" id="instagram" target="_blank">instagram <i class="fa fa-instagram" style="font-size: 20px;"></i></a>
-  <a href="https://www.macura.rs/kontakt" id="servis" target="_blank">servis&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp <i class="fas fa-car" style="font-size: 20px;"> </i></a>
-</div>
-
-<script>
-var slideIndex = 0;
-showSlides();
-
-function showSlides() {
-    var i;
-    var slides = document.getElementsByClassName("mySlides");
-    var dots = document.getElementsByClassName("dot");
-    for (i = 0; i < slides.length; i++) {
-       slides[i].style.display = "none";  
-    }
-    slideIndex++;
-    if (slideIndex > slides.length) {slideIndex = 1}    
-    for (i = 0; i < dots.length; i++) {
-        dots[i].className = dots[i].className.replace(" active", "");
-    }
-    slides[slideIndex-1].style.display = "block";  
-    dots[slideIndex-1].className += " active";
-    setTimeout(showSlides, 2000); // Change image every 2 seconds
-}
-</script>
-<script>
-var slideIndex2 = 1;
-showSlides2(slideIndex2);
-
-function plusSlides(n) {
-  showSlides2(slideIndex2 += n);
-}
-
-function currentSlide(n) {
-  showSlides(slideIndex2 = n);
-}
-
-function showSlides2(n) {
-  var i;
-  var slides = document.getElementsByClassName("mySlides2");
-  var dots = document.getElementsByClassName("dot2");
-  if (n > slides.length) {slideIndex2 = 1}    
-  if (n < 1) {slideIndex2 = slides.length}
-  for (i = 0; i < slides.length; i++) {
-      slides[i].style.display = "none";  
-  }
-  for (i = 0; i < dots.length; i++) {
-      dots[i].className = dots[i].className.replace(" active", "");
-  }
-  slides[slideIndex2-1].style.display = "block";  
-  dots[slideIndex2-1].className += " active";
-}
-</script>
 
 </body>
+
+<script src="js/index.js"></script>
+
 </html>

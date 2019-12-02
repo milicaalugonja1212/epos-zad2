@@ -1,380 +1,258 @@
 <!DOCTYPE html>
 <html prefix="og: http://ogp.me/ns#" lang="sr-yu">
 <html>
+
 <head>
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">  <!-- zbog ikona u footer-u	 -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <!-- zbog ikona u footer-u	 -->
 
-<link rel="stylesheet" type="text/css" href="css/footer.css">
-<link rel="stylesheet" type="text/css" href="css/header.css">
-<link rel="stylesheet" type="text/css" href="css/sidenav.css">
+  <link rel="stylesheet" type="text/css" href="css/footer.css">
+  <link rel="stylesheet" type="text/css" href="css/header.css">
+  <link rel="stylesheet" type="text/css" href="css/sidenav.css">
+  <link rel="stylesheet" type="text/css" href="css/rezervacija.css">
+  <link href="js/Google-Address-Autocomplete-Plugin-geocomplete/dist/jquery.geocomplete.min.css" rel="stylesheet">
 
-
-<style>
-* {
-    box-sizing: border-box;
-}
-
-
-body {
-    background-color: #F0F0F0;
-	
-    font-family: Helvetica, sans-serif;
-	background: url("images/14.png") no-repeat fixed;
-	
-}
-
-.naslov
-{
-	font-family: 'Open Sans';
-	font-weight: 300;
-	font-size: 30px;
-	text-align: center;
-	color: white;
-	position: relative;
-	border: 3px solid white;
-	background-color: #444;
-	top: 5%;
-	width:80%;
-	margin: 0 auto;
-	right: 0;
-	left: 0;
-	border-radius:15px;
-}
-
-
-input[type=text], select, textarea {
-    width: 100%;
-    padding: 12px;
-    border: 1px solid white;
-    border-radius: 4px;
-    resize: vertical;	
-}
-
-input[type=date],input[type=time] {
-    width: 50%;
-    padding: 12px;
-    border: 1px solid white;
-    border-radius: 4px;
-    resize: horizontal;	
-}
-
-input[type=mail]{
-    width: 100%;
-    padding: 12px;
-    border: 1px solid white;
-    border-radius: 4px;
-    resize: horizontal;	
-}
-
-
-
-label {
-    padding: 12px 12px 12px 0;
-    display: inline-block;
-	color: white;
-}
-
-input[type=submit] {
-    background-color: #4CAF50;
-    color: white;
-    padding: 12px 20px;
-    border: none;
-    border-radius: 4px;
-    cursor: pointer;
-    float: right;
-}
-
-input[type=submit]:hover {
-    background-color: #45a049;
-}
-
-.container {
-    border-radius: 15px;
-    background-color: #444;
-    padding: 20px;
-	width:50%;
-	margin: 0 auto;
-	opacity:0.9;
-	margin-bottom:25px;
-	
-}
-
-.col-25 {
-    float: left;
-    width: 25%;
-    margin-top: 6px;
-}
-
-.col-75 {
-    float: left;
-    width: 75%;
-    margin-top: 6px;
-	
-	
-}
-
-/* Clear floats after the columns */
-.row:after {
-    content: "";
-    display: table;
-    clear: both;
-}
-
-/* Responsive layout - when the screen is less than 600px wide, make the two columns stack on top of each other instead of next to each other */
-@media screen and (max-width: 600px) {
-    .col-25, .col-75, .naslov, .container, input[type=submit] {
-        width: 100%;
-        margin-top: 0;
-		 display: table;
-    clear: both;
-		
-    }
-}
-
-legend { font-size: 1.1em; background-color: #095D92; color: #FFFFFF; font-weight: bold; padding: 4px 8px; }
-
-.badge {
-  position: absolute;
-  top: 38px;
-  right: 5px;
-  padding: 5px 10px;
-  border-radius: 5%;
-  background-color: red;
-  color: white;
-}
-
-</style>
 
 </head>
 
 <body style="background-color: #ebebfa">
 
 
- <!-- glavni meni -->
+  <!-- glavni meni -->
 
-<div class="navbar">
-  <a class="active" href="index.html">Naslovna</a> 
-  <a href="o_nama.html">O nama</a>
-  <a href="rezervacija.html">Rezervacija</a>
-  <a href="kontakt.html">Kontakt</a>
-</div>
-<img src="images/LOGO_INBACO.png" alt="LOGO_INBACO"> 
+  <div class="navbar">
+    <a class="active" href="index.html">Naslovna</a>
+    <a href="o_nama.html">O nama</a>
+    <a href="rezervacija.html">Rezervacija</a>
+    <a href="kontakt.html">Kontakt</a>
+  </div>
+  <img src="images/LOGO_INBACO.png" alt="LOGO_INBACO">
 
-<!-- FORMA ZA REZERVACIJU VOZILA -->
+  <!-- FORMA ZA REZERVACIJU VOZILA -->
 
-<div class="naslov">Napravite rezervaciju vozila</div>
+  <div class="naslov">Napravite rezervaciju vozila</div>
 
-<div class="container">
-  <form >
-  
-  <fieldset>
-  <legend>Lični podaci</legend>
-    <div class="row">
-      <div class="col-25">
-        <label for="ime">Ime i prezime</label>
-      </div>
-      <div class="col-75">
-        <input type="text" id="ime" name="ime" placeholder="Upišite vaše ime i prezime.." required  >
-      </div>
-	
-	
-    </div>
-    <div class="row">
-      <div class="col-25">
-        <label for="adresa">Adresa</label>
-      </div>
-      <div class="col-75">
-        <input type="text" id="adresa" name="adresa" placeholder="Upisite Vasu adresu.." required>
-      </div>
-    </div>
-	
-	<div class="row">
-      <div class="col-25">
-        <label for="drzava">Država i grad</label>
-      </div>
-      <div class="col-75">
-        <input type="text" id="drzava" name="drzava" placeholder="Upisite drzavu i grad.." required>
-      </div>
-    </div>
-	
-	<div class="row">
-      <div class="col-25">
-        <label for="mail">E-mail</label>
-      </div>
-      <div class="col-75">
-        <input type="mail" id="mail" name="mail" placeholder="Upisite vas email.." required>
-      </div>
-    </div>
-	
-	<div class="row">
-      <div class="col-25">
-        <label for="tel">Telefon</label>
-      </div>
-      <div class="col-75">
-        <input type="text" id="tel" name="tel" placeholder="Upisite broj telefona.." required>
-      </div>
-    </div>
-	
-	</fieldset>
-	
-	<fieldset>
-	<legend>Način preuzimanja vozila</legend>
-	
-    <div class="row">
-      <div class="col-25">
-        <label for="lokacija-p">Lokacija preuzimanja</label>
-      </div>
-      <div class="col-75">
-        <select id="lokacija-p" name="lokacija-p">
-          <option value="aerodrom-p">Aerodrom Nikola Tesla</option>
-          <option value="inbaco-p">Direktno u kompaniji Inbaco</option>
-        </select>
-      </div>
-    </div>	
-	
-	<div class="row">
-      <div class="col-25">
-        <label for="datum-p">Datum preuzimanja </label>
-      </div>
-      <div class="col-75">
-        <input type="date" id="date" name="datum-p" placeholder="Upisite željeni datum preuzimanja vozila.." required>
-      </div>
-    </div>	
-	
-	<div class="row">
-      <div class="col-25">
-        <label for="vreme-p">Vreme</label>
-      </div>
-      <div class="col-75">
-        <input type="time" id="vreme-p" name="vreme-p" placeholder="Upisite željeno vreme preuzimanja vozila.." required>
-      </div>
-    </div>	
-	
-	
-	</fieldset>
-	
-	
-	<fieldset>
-	<legend>Način vraćanja vozila</legend>
-	
-    <div class="row">
-      <div class="col-25">
-        <label for="lokacija-v">Lokacija vraćanja</label>
-      </div>
-      <div class="col-75">
-        <select id="lokacija-v" name="lokacija-v">
-          <option value="aerodrom-v">Aerodrom Nikola Tesla</option>
-          <option value="inbaco-v">Direktno u kompaniji Inbaco</option>
-        </select>
-      </div>
-    </div>	
-	
-	<div class="row">
-      <div class="col-25">
-        <label for="datum-v">Datum vraćanja </label>
-      </div>
-      <div class="col-75">
-        <input type="date" id="datum-v" name="datum-v" placeholder="Upisite željeni datum preuzimanja vozila.." required>
-      </div>
-    </div>	
-	
-	<div class="row">
-      <div class="col-25">
-        <label for="vreme-v">Vreme</label>
-      </div>
-      <div class="col-75">
-        <input type="time" id="vreme-v" name="vreme-v" placeholder="Upisite željeno vreme preuzimanja vozila.." required>
-      </div>
-    </div>	
-	
-	
-	</fieldset>
-	
-	<fieldset>
-	<legend>Izbor automobila:</legend>
-    <div class="row">
-      <div class="col-25">
-        <label for="auto">Automobil</label>
-      </div>
-      <div class="col-75">
-        <select id="auto" name="auto">
-          <option value="Fiat Grande Punto (crveni)">Fiat Grande Punto (crveni)</option>
-          <option value="Fiat Grande Punto (beli)">Fiat Grande Punto (beli)</option>
-          <option value="Fiat Grande Punto (plavi)">Fiat Grande Punto (plavi)</option>
-		  <option value="Fiat Grande Punto (crni)">Fiat Grande Punto (crni)</option>
-		  <option value="Opel Astra karavan (sivi)">Opel Astra karavan (sivi)</option>
-		  <option value="Opel Astra karavan (beli)">Opel Astra karavan (beli)</option>
-		  <option value="Opel Insignia karavan (beli)">Opel Insignia karavan (beli)</option>
-		  <option value="Opel Insignia karavan automatik (crni)">Opel Insignia karavan automatik (crni)</option>
-		  <option value="Peugeot 308">Peugeot 308</option>
-		  
-		  
-        </select>
-      </div>
-    </div>
-    <div class="row">
-      <div class="col-25">
-        <label for="poruka">Poruka</label>
-      </div>
-      <div class="col-75">
-        <textarea id="poruka" name="poruka" placeholder="Ostavite poruku, posebne zahteve, upite.." style="height:200px"></textarea>
-      </div>
-    </div>
-	</fieldset>
-	
-	
-	<fieldset>
-			<legend>Dodatna oprema:</legend>
-				<label for="option1"><input class="choose" name="dodatno[]" id="option1" type="checkbox" value="Krovni kofer Thule kapaciteta 480 litara" /> &nbsp; Krovni kofer Thule kapaciteta 480 litara</label><br />
-				<label for="option2"><input class="choose" name="dodatno[]" id="option2" type="checkbox" value="Navigacija sa najnovijim mapama, radarima, ogranicenjima brzine" /> &nbsp; Navigacija sa najnovijim mapama, radarima, ogranicenjima brzine...</label><br />
-				<label for="option3"><input class="choose" name="dodatno[]" id="option3" type="checkbox" value="Decije sediste za sve uzraste" /> &nbsp; Decije sediste za sve uzraste</label><br />
-				
-		</fieldset>
-	
-	
-	
-	
-	
-    <div class="row">
-      <input type="submit" value="Posalji">
-    </div>
-  </form>
-</div>
+  <div class="container">
+    <form name="forma" onsubmit="return validirajFormu()" id="forma">
+      <fieldset>
+        <legend>Lični podaci</legend>
+        <div class="row">
+          <div class="col-25">
+            <label for="ime">Ime i prezime*</label>
+          </div>
+          <div class="col-75">
+            <input type="text" id="ime" name="ime" placeholder="Upišite vaše ime i prezime" >
+          </div>
 
-<div class="footer2" style="font-family: Arial, Helvetica, sans-serif;">
-  <div class="row2">
-  <div class="column2">
-    <div class="card2">
-      <p><i class="fa fa-map-marker" style="font-size: 50px;"></i></p>
-      <h3>Teodora d.o.o RENT A CAR</h3>
-      <p>Prizrenska 29, 11080 Zemun</p>
-	  <p>Radno vreme: <br>ponedeljak-petak 8-17h <br> subota 8-14h</p>
-    </div>
+
+        </div>
+        <div class="row">
+          <div class="col-25">
+            <label for="adresa">Adresa</label>
+          </div>
+          <div class="col-75">
+            <input type="text" id="adresa" name="adresa" placeholder="Upisite Vasu adresu" >
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="col-25">
+            <label for="drzava">Država i grad*</label>
+          </div>
+          <div class="col-75">
+            <input type="text" id="drzava" name="drzava" placeholder="Upisite drzavu i grad" >
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="col-25">
+            <label for="mail">E-mail*</label>
+          </div>
+          <div class="col-75">
+            <input type="mail" id="mail" name="mail" placeholder="Upisite vas email" >
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="col-25">
+            <label for="tel">Telefon</label>
+          </div>
+          <div class="col-75">
+            <input type="text" id="tel" name="tel" placeholder="Upisite broj telefona" >
+          </div>
+        </div>
+
+      </fieldset>
+
+      <fieldset>
+        <legend>Način preuzimanja vozila</legend>
+
+        <div class="row">
+          <div class="col-25">
+            <label for="lokacija-p">Lokacija preuzimanja</label>
+          </div>
+          <div class="col-75">
+            <select id="lokacija-p" name="lokacija-p">
+              <option value="aerodrom-p">Aerodrom Nikola Tesla</option>
+              <option value="inbaco-p">Direktno u kompaniji Inbaco</option>
+            </select>
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="col-25">
+            <label for="datum-p">Datum preuzimanja</label>
+          </div>
+          <div class="col-75">
+            <input type="date" id="date" name="datum-p" placeholder="Upisite željeni datum preuzimanja vozila"
+              >
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="col-25">
+            <label for="vreme-p">Vreme</label>
+          </div>
+          <div class="col-75">
+            <input type="time" id="vreme-p" name="vreme-p" placeholder="Upisite željeno vreme preuzimanja vozila"
+              >
+          </div>
+        </div>
+
+
+      </fieldset>
+
+
+      <fieldset>
+        <legend>Način vraćanja vozila</legend>
+
+        <div class="row">
+          <div class="col-25">
+            <label for="lokacija-v">Lokacija vraćanja</label>
+          </div>
+          <div class="col-75">
+            <select id="lokacija-v" name="lokacija-v">
+              <option value="aerodrom-v">Aerodrom Nikola Tesla</option>
+              <option value="inbaco-v">Direktno u kompaniji Inbaco</option>
+            </select>
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="col-25">
+            <label for="datum-v">Datum vraćanja</label>
+          </div>
+          <div class="col-75">
+            <input type="date" id="datum-v" name="datum-v" placeholder="Upisite željeni datum vraćanja vozila"
+              >
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="col-25">
+            <label for="vreme-v">Vreme</label>
+          </div>
+          <div class="col-75">
+            <input type="time" id="vreme-v" name="vreme-v" placeholder="Upisite željeno vreme vraćanja vozila"
+              >
+          </div>
+        </div>
+
+
+      </fieldset>
+
+      <fieldset>
+        <legend>Izbor automobila:</legend>
+        <div class="row">
+          <div class="col-25">
+            <label for="auto">Automobil</label>
+          </div>
+          <div class="col-75">
+            <select id="auto" name="auto" >
+              <option value="Fiat Grande Punto (crveni)">Fiat Grande Punto (crveni)</option>
+              <option value="Fiat Grande Punto (beli)">Fiat Grande Punto (beli)</option>
+              <option value="Fiat Grande Punto (plavi)">Fiat Grande Punto (plavi)</option>
+              <option value="Fiat Grande Punto (crni)">Fiat Grande Punto (crni)</option>
+              <option value="Opel Astra karavan (sivi)">Opel Astra karavan (sivi)</option>
+              <option value="Opel Astra karavan (beli)">Opel Astra karavan (beli)</option>
+              <option value="Opel Insignia karavan (beli)">Opel Insignia karavan (beli)</option>
+              <option value="Opel Insignia karavan automatik (crni)">Opel Insignia karavan automatik (crni)</option>
+              <option value="Peugeot 308">Peugeot 308</option>
+
+
+            </select>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-25">
+            <label for="poruka">Poruka</label>
+          </div>
+          <div class="col-75">
+            <textarea id="poruka" name="poruka" placeholder="Ostavite poruku, posebne zahteve, upite"
+              style="height:200px"></textarea>
+          </div>
+        </div>
+      </fieldset>
+
+
+      <fieldset>
+        <legend>Dodatna oprema:</legend>
+        <label for="option1"><input class="choose" name="dodatno[]" id="option1" type="checkbox"
+            value="Krovni kofer Thule kapaciteta 480 litara" /> &nbsp; Krovni kofer Thule kapaciteta 480
+          litara</label><br />
+        <label for="option2"><input class="choose" name="dodatno[]" id="option2" type="checkbox"
+            value="Navigacija sa najnovijim mapama, radarima, ogranicenjima brzine" /> &nbsp; Navigacija sa najnovijim
+          mapama, radarima, ogranicenjima brzine...</label><br />
+        <label for="option3"><input class="choose" name="dodatno[]" id="option3" type="checkbox"
+            value="Decije sediste za sve uzraste" /> &nbsp; Decije sediste za sve uzraste</label><br />
+
+      </fieldset>
+
+      <div class="row">
+        <input type="submit" value="Posalji">
+      </div>
+    </form>
   </div>
 
-  <div class="column2">
-    <div class="card2">
-      <p><i class="fa fa-phone" style="font-size: 50px;"></i></p>
-      <h3>Telefoni</h3>
-      <p>011/3166770</p>
-	  <p>011/3166771</p>
-	  <p>011/3166772</p>
+  <div class="footer2" style="font-family: Arial, Helvetica, sans-serif;">
+    <div class="row2">
+      <div class="column2">
+        <div class="card2">
+          <p><i class="fa fa-map-marker" style="font-size: 50px;"></i></p>
+          <h3>Teodora d.o.o RENT A CAR</h3>
+          <p>Prizrenska 29, 11080 Zemun</p>
+          <p>Radno vreme: <br>ponedeljak-petak 8-17h <br> subota 8-14h</p>
+        </div>
+      </div>
+
+      <div class="column2">
+        <div class="card2">
+          <p><i class="fa fa-phone" style="font-size: 50px;"></i></p>
+          <h3>Telefoni</h3>
+          <p>011/3166770</p>
+          <p>011/3166771</p>
+          <p>011/3166772</p>
+        </div>
+      </div>
+
+      <div class="column2">
+        <div class="card2">
+          <p><i class="fa fa-envelope" style="font-size: 50px;"></i></p>
+          <h3>Kontaktirajte nas</h3>
+          <p>E-mail: teodorao@gmail.rs</p>
+          <p>Website: www.teodorarentacar.rs</p>
+        </div>
+      </div>
+
+
+
     </div>
   </div>
-  
-  <div class="column2">
-    <div class="card2">
-      <p><i class="fa fa-envelope" style="font-size: 50px;"></i></p>
-      <h3>Kontaktirajte nas</h3>
-      <p>E-mail: teodorao@gmail.rs</p>
-	  <p>Website: www.teodorarentacar.rs</p>
-    </div>
-  </div>
-  
-  
-  
-</div>
-</div>
+  <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?libraries=places&amp;key=AIzaSyDynyLnnb4W8ECcpp8xNEBlzdc8UHyfIhg"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script type="text/javascript" src="js/rezervacija.js"></script>
+  <script src="js/Google-Address-Autocomplete-Plugin-geocomplete/dist/jquery.geocomplete.min.js"></script>
 </body>
+
 </html>

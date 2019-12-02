@@ -1,0 +1,40 @@
+{
+  "name": "jquery.geocomplete",
+  "version": "2.1.1",
+  "description": "A simple jquery plugin for Google Maps Autocomplete",
+  "main": "dist/jquery.geocomplete.min.js",
+  "license": "MIT",
+  "scripts": {
+    "dev": "npm run build:demo && npm run watch:js",
+    "build": "npm run build:js && npm run build:css",
+    "build:css": "node-sass --output-style compressed src/scss/main.scss > dist/jquery.geocomplete.min.css",
+    "build:demo": "node-sass --output-style compressed src/scss/main.scss > demo/assets/jquery.geocomplete.min.css",
+    "build:js": "rollup -c",
+    "watch:js": "rollup -c -w"
+  },
+  "author": "Trent Mentink",
+  "bugs": {
+    "url": "https://github.com/tmentink/jquery.geocomplete/issues"
+  },
+  "homepage": "https://github.com/tmentink/jquery.geocomplete",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/tmentink/jquery.geocomplete.git"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.7.2",
+    "@babel/preset-env": "^7.7.1",
+    "eslint": "^6.6.0",
+    "eslint-config-prettier": "^6.5.0",
+    "eslint-config-problems": "^3.0.1",
+    "eslint-plugin-prettier": "^3.1.1",
+    "node-sass": "^4.13.0",
+    "prettier": "^1.19.1",
+    "rollup": "^1.27.0",
+    "rollup-plugin-babel": "^4.3.3",
+    "rollup-plugin-banner": "^0.2.1",
+    "rollup-plugin-cleanup": "^3.1.1",
+    "rollup-plugin-node-resolve": "^5.2.0",
+    "rollup-plugin-uglify": "^6.0.3"
+  }
+}

@@ -1,0 +1,26 @@
+@media screen and (max-width: 600px) {
+  .navbar a{
+      width: 100%;
+      margin-top: 0;
+   display: table;
+  clear: both;
+  
+  }
+
+.naslov3 {
+ position: absolute;
+ top: 50%;
+ width:40%;
+margin-left:65px;
+font-size:3vw;
+font-family: 'Open Sans';
+ color: white;
+ text-align: left;
+}
+
+.border {
+width:60%;
+margin-left:20%;
+display:block;
+
+}
