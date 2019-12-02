@@ -16,9 +16,9 @@ function validirajFormu() {
     validacijaMaila(forma['mail'].value) &&
     validacijaDrzavaGrad(forma["drzava"].value);
   if (formaValidna) {
-    alert("Rezervacija uspesna");
+    alertify.success("Rezervacija uspesna");
   } else {
-    alert("Nisu popunjena sva obavezna polja");
+    alertify.error("Nisu popunjena sva obavezna polja");
   }
   return formaValidna;
 }
@@ -40,7 +40,11 @@ document.getElementById('vreme-v').value = vremeVracanja;
 
 
 $(document).ready(function() {
-  $("#adresa").geocomplete({
-    formId: "#forma"
-  });
+  // $("#adresa").geocomplete({
+  //   formId: "#forma"
+  // });
+
+  $('#forma').on('submit', function(e) {
+    e.preventDefault();
+  })
 });
